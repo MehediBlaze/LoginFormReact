@@ -1,0 +1,36 @@
+{
+    "name": "loginformreact",
+    "version": "1.0.0",
+    "description": "Login/Signup flow using MERN Stack",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server-dev": "cd server && npm run dev",
+        "client-dev": "cd client && npm start",
+        "server-prod": "cd server && npm start",
+        "client-prod": "cd client && npm run build",
+        "dev": "concurrently 'npm run server-dev' 'npm run client-dev'",
+        "prod": "concurrently 'npm run server-prod' 'npm run client-prod'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MehediBlaze/LoginFormReact.git"
+    },
+    "keywords": [
+        "Node",
+        "Express",
+        "MongoDB",
+        "React",
+        "MUI",
+        "Redux"
+    ],
+    "author": "Mehedi",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/MehediBlaze/LoginFormReact/issues"
+    },
+    "homepage": "https://github.com/MehediBlaze/LoginFormReact#readme",
+    "dependencies": {
+        "concurrently": "^6.5.1"
+    }
+}
