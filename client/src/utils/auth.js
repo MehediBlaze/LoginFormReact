@@ -1,9 +1,15 @@
 import axios from "axios";
 
+const environment = process.env["REACT_APP_ENVIRONMENT"];
+const baseURL =
+    environment === "server"
+        ? "https://login-form-reactjs.herokuapp.com"
+        : "http://localhost:5000";
+
 const IsLoggedIn = () => {
     return (dispatch) => {
         const options = {
-            url: "http://localhost:5000/auth/loggedin",
+            url: `${baseURL}/auth/loggedin`,
             method: "GET"
         };
         axios(options).then((resp) => {
@@ -15,7 +21,7 @@ const IsLoggedIn = () => {
 const LogIn = (data) => {
     return function (dispatch) {
         const options = {
-            url: "http://localhost:5000/auth/login",
+            url: `${baseURL}/auth/login`,
             method: "POST",
             data: data
         };
@@ -30,7 +36,7 @@ const LogIn = (data) => {
 const Register = (data) => {
     return function (dispatch) {
         const options = {
-            url: "http://localhost:5000/auth",
+            url: `${baseURL}/auth`,
             method: "POST",
             data: data
         };
@@ -45,7 +51,7 @@ const Register = (data) => {
 const LogOut = () => {
     return (dispatch) => {
         const options = {
-            url: "http://localhost:5000/auth/logout",
+            url: `${baseURL}/auth/logout`,
             method: "GET"
         };
         axios(options)
