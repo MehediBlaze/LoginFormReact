@@ -13,7 +13,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: ["http://localhost:3000"],
+        origin: [
+            "http://localhost:3000",
+            "https://login-form-reactjs-frontend.netlify.app"
+        ],
         credentials: true
     })
 );
